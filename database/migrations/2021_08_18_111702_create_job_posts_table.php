@@ -1,0 +1,41 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateJobPostsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('job_posts', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('class_mode');
+            $table->string('class');
+            $table->string('subject');
+            $table->string('language');
+            $table->string('name');
+            $table->string('city');
+            $table->string('area_pin');
+            $table->string('fee_range');
+            $table->string('email');
+            $table->string('phone');;
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('job_posts');
+    }
+}
