@@ -12,15 +12,15 @@
                             </div>
                               <div class="textwidget pr-60 md-pr-15"><p class="white-color">Are you looking to excel in your academics but require a one-to-one session from a reliable professional? Sometimes, all it takes is the right guidance and hence our tutors are very considerate and patient to ensure you’re comfortable to learn at your own pace. </p>
                               </div>
-                              <ul class="footer_social">  
-                                  <li> 
-                                      <a href="https://www.facebook.com/kalp.educare.75" target="_blank"><span><i class="fa fa-facebook"></i></span></a> 
+                              <ul class="footer_social">
+                                  <li>
+                                      <a href="https://www.facebook.com/kalp.educare.75" target="_blank"><span><i class="fa fa-facebook"></i></span></a>
                                   </li>
-                                  <li> 
-                                      <a href="https://www.instagram.com/qalpedu/" target="_blank"><span><i class="fa fa-instagram"></i></span></a> 
+                                  <li>
+                                      <a href="https://www.instagram.com/qalpedu/" target="_blank"><span><i class="fa fa-instagram"></i></span></a>
                                   </li>
-                                   <li> 
-                                      <a href="https://twitter.com/qalpedu" target="_blank"><span><i class="fa fa-twitter"></i></span></a> 
+                                   <li>
+                                      <a href="https://twitter.com/qalpedu" target="_blank"><span><i class="fa fa-twitter"></i></span></a>
                                   </li>
                               </ul>
                         </div>
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="container">                    
+                <div class="container">
                     <div class="row y-middle">
                         <div class="col-lg-6">
                             <div class="copyright">
@@ -84,49 +84,50 @@
 
         <!---- Start Model -->
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">What are you looking for?</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-       <div class="container">
-               <div class="row">
-                  <div class="col-lg-6" style="padding-right: 1px; padding-left: 1px;">
-                     <div class="effects-bg apply-bgs">
-                        <div class="content-parts">
+    <!-- Start Model -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">What are you looking for?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6" style="padding-right: 1px; padding-left: 1px; background:#237f78;
+                        ">
+                            <div class="effects-bg">
+                                <div class="content-parts">
+                                    <h4 class="text-center text-white ">Want To Hire Home Tutor ?</h4>
+                                    <p class="text-white text-center">We will help you to Hire well qualified and exerienced Home Tuition Teacher, To Hire Click On The Button Below.</p>
+                                    <div class="btn-part text-center">
+                                        <a class="readon2 cta-btn" href="{{ URL::asset('student_sign_up') }}" style="background: #f49e4d;">Create
+                                            Hire Home Tutor</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                     <div class="content">
-                           <h3 class="title">Are you a Parent / Student?</h3>
-                           <div class="btn-part">
-                              <a class="readon2 cta-btn" href="{{ URL::asset('student_sign_up') }}">Create Account as a Student</a>
-                           </div>
-                           </div>
-                  </div>
-                  <div class="col-lg-6" style="padding-right: 1px; padding-left: 1px;">
-                     <div class="effects-bg enroll-bgs">
-                        <div class="content-parts">
+                        <div class="col-lg-6" style="padding-right: 1px; padding-left: 1px; background: #e8a042;">
+                            <div class="effects-bg">
+                                <div class="content-parts">
+                                    <h4 class="text-center text-white ">Want To Join As a Teacher ?</h4>
+                                    <p class="text-white text-center">We provides Home Tuition Jobs and Online Tuition Jobs Near to Your Locality. To Join Click On The Button Below.</p>
+                                    <div class="btn-part text-center">
+                                        <a class="readon2 cta-btn" href="{{ URL::asset('teacher_sign_up') }}">
+                                            Register As a Teacher</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                      <div class="content">
-                           <h3 class="title">Are you a Teacher?</h3>
-                           <div class="btn-part">
-                              <a class="readon2 cta-btn" href="{{ URL::asset('teacher_sign_up') }}">
-                              Create Account as a Tutor</a>
-                              </div>
-                           </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
+        </div>
     </div>
-  </div>
-</div>
-        <!-- End Moodel -->
+    <!-- End Moodel -->
 
 <script>
 function openNav() {
@@ -145,7 +146,7 @@ function closeNav() {
       <!-- Bootstrap v4.4.1 js -->
       <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
       <!-- Menu js -->
-      <script src="{{ URL::asset('js/rsmenu-main.js') }}"></script> 
+      <script src="{{ URL::asset('js/rsmenu-main.js') }}"></script>
       <!-- op nav js -->
       <script src="{{ URL::asset('js/jquery.nav.js') }}"></script>
       <!-- owl.carousel js -->
@@ -160,7 +161,7 @@ function closeNav() {
       <script src="{{ URL::asset('js/wow.min.js') }}"></script>
       <!-- counter top js -->
       <!-- magnific popup js -->
-      <script src="{{ URL::asset('js/jquery.magnific-popup.min.js') }}"></script>      
+      <script src="{{ URL::asset('js/jquery.magnific-popup.min.js') }}"></script>
       <!-- plugins js -->
       <script src="{{ URL::asset('js/plugins.js') }}"></script>
       <!-- main js -->

@@ -18575,7 +18575,7 @@ sup {
 }
 
 .content-parts {
-	padding: 255px 12px 10px 10px
+    padding: 25px 20px 10px 20px;
 }
 
 .effects-bg.apply-bgs {
@@ -20225,4 +20225,69 @@ a.btn {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+}
+.rs-my-account .title {
+    font-size: 36px;
+    line-height: 15px;
+    font-weight: 700;
+    color: #0a0a0a;
+    margin: 0;
+    border-bottom: 2px solid #1a4069;
+    width: 100px;
+    margin-bottom: 25px;
+  }
+  .rs-my-account .rs-login {
+      background: #fff;
+      padding: 25px;
+      text-align: left;
+      box-shadow: 0 0 10px #0000000f;
+  }
+  .rs-my-account .rs-login .form-group label {
+    display: block;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #454545;
+  }
+  .rs-my-account .rs-login .form-group label span {
+    color: #f01808;
+  }
+  .rs-my-account .rs-login .form-group input {
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    line-height: normal;
+    border: 1px solid rgba(54, 54, 54, 0.1);
+    height: 45px;
+  }
+  .rs-my-account .rs-login .last-password a {
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #48a0d7;
+  }
+  .rs-my-account .rs-login p {
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #454545;
+    margin-bottom: 14px;
+  }
+  .rs-my-account .rs-login p a {
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #48a0d7;
+  }
+  .add-btn {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    padding: 10px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    background: #1a4069;
+    color: #ffffff;
+    border: none;
 }

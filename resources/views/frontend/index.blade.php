@@ -1499,7 +1499,6 @@
     </div>
     <!-- Search Modal End -->
     <!-- Start Model -->
-    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -1512,29 +1511,28 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6" style="padding-right: 1px; padding-left: 1px;">
-                            <div class="effects-bg apply-bgs">
+                        <div class="col-lg-6" style="padding-right: 1px; padding-left: 1px; background:#237f78;
+                        ">
+                            <div class="effects-bg">
                                 <div class="content-parts">
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">Are you a Parent / Student?</h3>
-                                <div class="btn-part">
-                                    <a class="readon2 cta-btn" href="{{ URL::asset('student_sign_up') }}">Create
-                                        Account as a Student</a>
+                                    <h4 class="text-center text-white ">Want To Hire Home Tutor ?</h4>
+                                    <p class="text-white text-center">We will help you to Hire well qualified and exerienced Home Tuition Teacher, To Hire Click On The Button Below.</p>
+                                    <div class="btn-part text-center">
+                                        <a class="readon2 cta-btn" href="{{ URL::asset('student_sign_up') }}" style="background: #f49e4d;">Create
+                                            Hire Home Tutor</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6" style="padding-right: 1px; padding-left: 1px;">
-                            <div class="effects-bg enroll-bgs">
+                        <div class="col-lg-6" style="padding-right: 1px; padding-left: 1px; background: #e8a042;">
+                            <div class="effects-bg">
                                 <div class="content-parts">
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">Are you a Teacher?</h3>
-                                <div class="btn-part">
-                                    <a class="readon2 cta-btn" href="{{ URL::asset('teacher_sign_up') }}">
-                                        Create Account as a Tutor</a>
+                                    <h4 class="text-center text-white ">Want To Join As a Teacher ?</h4>
+                                    <p class="text-white text-center">We provides Home Tuition Jobs and Online Tuition Jobs Near to Your Locality. To Join Click On The Button Below.</p>
+                                    <div class="btn-part text-center">
+                                        <a class="readon2 cta-btn" href="{{ URL::asset('teacher_sign_up') }}">
+                                            Register As a Teacher</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

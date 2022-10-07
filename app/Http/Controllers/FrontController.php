@@ -420,5 +420,6 @@ class FrontController extends Controller
         return redirect('dashboard')->with('success','We will attend your query within 24hours. !!Thank You!!');
     }
 
+    
 
 }

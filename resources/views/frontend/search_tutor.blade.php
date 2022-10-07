@@ -37,7 +37,7 @@
                      <div class="widget-area">
                        <div class="widget-archives mb-50 d-block d-sm-none">
                             <div>
-                             <button class="btn btn-primary w-100" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Filter</button>
+                             <button class="w-100" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" style="background:#237f78; color:#fff;">Filter</button>
                             </div>
                            <div class="collapse multi-collapse" id="multiCollapseExample1">
                             <form  action="#" method="GET" id="search_form_mobile">
@@ -105,8 +105,8 @@
                                            <label for="check1">{{$language->name}}</label>
                                        </div>
                                        @endforeach
-                                   </div>  
-                                   
+                                   </div>
+
                                    <h5>By Class</h5>
                                    <div class="single-filter mb-30">
                                       @foreach(App\Course::where('status','enable')->get() as $class)
@@ -115,7 +115,7 @@
                                            <label for="check1">{{$class->name}} </label>
                                        </div>
                                        @endforeach
-                                   </div> 
+                                   </div>
                                    </div>
 <!--                                   <div class="single-filter mb-30">
                                        <h5>By Specilization</h5>
@@ -134,11 +134,11 @@
                                            <label for="check1">{{$subject->name}}</label>
                                        </div>
                                         @endforeach
-                                   </div>       
+                                   </div>
                                    </form>
-                               </div>                                 
+                               </div>
                            </div>
-                       </div>  
+                       </div>
 <!--                        <div class="recent-posts-widget mb-50">
                            <h3 class="widget-title">Recent Added Teacher</h3>
                            @foreach($teach as $item)
@@ -153,7 +153,7 @@
                                        {{$item->user_details->qualification}}
                                    </span>
                                </div>
-                           </div> 
+                           </div>
                            @endforeach
                        </div>-->
                      </div>
@@ -169,7 +169,7 @@
                   </div>
                </div>
             </div>
-            
+
          </div>
          <!-- Blog Section End -->
                      <div class="rs-newsletter style6 bg4 pt-100 md-pt-70 md-pb-60">
@@ -179,16 +179,16 @@
                             <h1 class="title mb-10">Best and Professional home tutor in Varanasi, Lucknow, and in other cities</h1>
                             <div class="sub-title">
                                 <p class="pmr">Qalp Edu provides selected, well versed tutors  for your ward bright future at a reasonable cost for all subjects, especially for English, Maths and Science.</p>
-                                 <p class="pmr">Tutors who are experts in their fields and subjects are selected by Qalp Edu after a short interview and verification process.</p>  
-                                  <p class="pmr">Select your best & suitable tutors by analysing their review and Details, which will be helpful in enhancing  the student's skills and knowledge. 
+                                 <p class="pmr">Tutors who are experts in their fields and subjects are selected by Qalp Edu after a short interview and verification process.</p>
+                                  <p class="pmr">Select your best & suitable tutors by analysing their review and Details, which will be helpful in enhancing  the student's skills and knowledge.
 </p>
-                                   <p class="pmr">home tutors at our platform are retired experienced teaching professionals and educational experts, school and college working teachers & Professors, College going selected brilliant and bright students with teaching skills. 
+                                   <p class="pmr">home tutors at our platform are retired experienced teaching professionals and educational experts, school and college working teachers & Professors, College going selected brilliant and bright students with teaching skills.
                                     </p>
                                     <p class="pmr">Home based tuitions offer focused attention on the pupil and aid them in learning better.</p>
                                     <p class="pmr">Maths and science tutors may be necessary for students who are weak in the subject and intend to take up courses that involve arithmetic, calculus, advanced trigonometry, physics, Organic chemistr, Physical chemistry, biology & others. </p>
                                     <p class="pmr">These specialized tutors may factor in different aspects before commissioning a fee for their services. Above is a vast list of Home Tutors in  Lucknow, Varanasi and in other cities, feel free to contact them and book your free demo now.
                                         </p><br>
-                            <h2 class="title mb-10">How can Qalpedu helps in find the best home tutor</h2> 
+                            <h2 class="title mb-10">How can Qalpedu helps in find the best home tutor</h2>
                             <div class="sub-title">
                                 <p>With the increasing competition among students to work hard and excel in their academic results, home tutors are here to help them. They have the exact expertise and guidance to teach students with effective learning techniques. They have a systematic teaching approach that helps the students learn everything that they should within the specified time frame. They make sure to solve the doubts and also arrange competitive tests to make sure how much the students have understood. For parents or students who are looking for the best home tutors in varanasi and lucknow, Qalpedu is their one-stop destination. We will help you connect with the best home tutors in your city and also have all the information about their contact details, fees charged by them, the subjects they teach, their years of experience in teaching, and also the ratings and reviews given by other students.</p>
                             </div>
@@ -196,28 +196,28 @@
                     </div>
                 </div>
             </div>
-      <!-- Main content End --> 
+      <!-- Main content End -->
 
 
                 <!--- Start footer -->
        @include('frontend/include/footer')
       <!--- End Footer -->
 
-    
+
      <script type="text/javascript">
-   
+
    $(document).on('click', '.tutor a', function(event){
-   event.preventDefault(); 
+   event.preventDefault();
    var page = $(this).attr('href').split('page=')[1];
    fetch_data(page);
    fetch_data_mobile(page);
-   
+
    });
 
     function fetch_data(page){
-        
+
              var key=$('#search').val();
-            
+
             $.ajax({
                 type:"GET",
                 async: false,
@@ -247,11 +247,11 @@
                 }
             });
         }
-        
+
     function fetch_data_mobile(page){
-        
+
              var key=$('#search_mobile').val();
-            
+
             $.ajax({
                 type:"GET",
                 async: false,
@@ -280,17 +280,17 @@
 
                 }
             });
-        }    
-        
+        }
+
     function filter(){
            var page = $('#current_page_number').val();
             fetch_data(page);
       }
-        
+
     function filter_mobile(){
            var page = $('#current_page_number').val();
             fetch_data_mobile(page);
-      }  
+      }
 
 
 
