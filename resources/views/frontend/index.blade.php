@@ -1575,7 +1575,6 @@
     </div>
     <!-- End Model-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <div class="container">
         <div class="modal fade" id="offerModal" role="dialog" data-keyboard="false" data-backdrop="static" style="z-index:999999999;">
             <div class="modal-dialog modal-md modal-dialog-centered">
