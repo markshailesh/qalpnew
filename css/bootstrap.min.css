@@ -286,7 +286,7 @@ button:not(:disabled) {
 	cursor: pointer;
 	box-shadow: 0 0 20px #0000000f;
 	border: 0 !important;
-	padding: 8px 13px !important;
+	padding: 8px 10px !important;
 }
 .bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover{
     color: #767676 !important;
@@ -6397,18 +6397,18 @@ a.badge-dark:focus {
 }
 
 button.close {
-	padding: 0;
-	background-color: #dea233;
-	border: 0;
-	font-size: 14px;
-	color: #fff;
-	line-height: 15px;
-	padding: 7px;
-	border-radius: 50px;
-	right: -7px;
-	top: -8px;
-	opacity: 1;
-	position: absolute
+    padding: 0;
+    background-color: #dea233;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 14px;
+    padding: 7px;
+    border-radius: 50px;
+    right: -7px;
+    top: -12px;
+    opacity: 1;
+    position: absolute;
 }
 
 a.close.disabled {

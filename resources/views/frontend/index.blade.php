@@ -418,21 +418,22 @@
                                             placeholder="Student Name" required="">
                                     </div>
                                     <div class="col-lg-6 mb-6 col-md-12">
-                                        <select class="form-select selct" aria-label="Default select example"
+                                        <select class="form-select select2" data-live-search="true"
                                             id="city" name="city" required="">
                                             <option value="">Select City</option>
-                                            <option value="Azamgadh">Azamgadh</option>
-                                            <option value="Gorakhpur">Gorakhpur</option>
-                                            <option value="Jaunpur">Jaunpur</option>
-                                            <option value="Jhanshi">Jhanshi</option>
-                                            <option value="Lucknow">Lucknow</option>
-                                            <option value="Merath">Merath</option>
-                                            <option value="Mirzapur">Mirzapur</option>
-                                            <option value="Mughalsarai">Mughalsarai</option>
-                                            <option value="Noida">Noida</option>
-                                            <option value="Patna">Patna</option>
-                                            <option value="Prayagraj">Prayagraj</option>
                                             <option value="Varanasi">Varanasi </option>
+                                            <option value="Prayagraj">Prayagraj</option>
+                                            <option value="Lucknow">Lucknow</option>
+                                            <option value="GNoida">Gr.Noida</option>
+                                            <option value="Noida">Noida</option>
+                                            <option value="Gaziyabad">Gaziyabad</option>
+                                            <option value="NDelhi">New Delhi</option>
+                                            <option value="Mumbai">Mumbai</option>
+                                            <option value="Pune">Pune</option>
+                                            <option value="Banglore">Banglore</option>
+                                            <option value="Kolkata">Kolkata</option>
+                                            <option value="Patna">Patna</option>
+                                            <option value="Mirzapur">Mirzapur</option>
                                         </select>
                                     </div>
                                     <div class="col-lg-6 mb-15 col-md-12">
@@ -1573,6 +1574,40 @@
         </div>
     </div>
     <!-- End Model-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <div class="container">
+        <div class="modal fade" id="offerModal" role="dialog" data-keyboard="false" data-backdrop="static" style="z-index:999999999;">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="section-full">
+                        <div class="container">
+                            <div style="padding: 2px;">
+                                <form method="post" action="">
+                                    <div class="row">
+                                        <a href="#">
+                                        <img src="{{asset('images/diwali-offer.png')}}" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if (sessionStorage.getItem('#offerModal') !== 'true') {
+              $('#offerModal').modal('show');
+              sessionStorage.setItem('#offerModal','true');
+            }
+        });
+    </script>
     <!-- modernizr js -->
     <script src="{{ URL::asset('js/modernizr-2.8.3.min.js') }}"></script>
     <!-- jquery latest version -->

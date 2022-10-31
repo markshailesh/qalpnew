@@ -10,21 +10,21 @@
     $('.tog').change(function() {
       var status= $(this).prop('checked');
         var c= $(this).val();
-      
-      
+
+
       if(status==true){
-        
+
         var state="enable";
       }
       if(status==false){
         var state="disable";
       }
 
-       
+
         $.ajax({
                type:'POST',
                url:'/update_status_teacher',
-               data:{ 
+               data:{
                 _token:'{{ csrf_token() }}',
                 stat: state,
                 id:c
@@ -49,7 +49,7 @@ $.growl.inactive({
             });
     })
   })
-  
+
 </script>
 <style>
 .switch {
@@ -59,7 +59,7 @@ $.growl.inactive({
   height: 34px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -177,7 +177,7 @@ input:checked + .slider:before {
                                           <option value="{{$subject->name}}" @if(in_array($subject->name,$subjects)){{'Selected'}} @endif>{{$subject->name}}</option>@endforeach</select>
                                     </div>
                                  </div>
-                                 
+
                                  <div class="col-md-2">
                                     <div class="form-group">
                                        <label for="" class="form-label dd">By Class/Course</label>
@@ -186,7 +186,7 @@ input:checked + .slider:before {
                                           <option value="{{$class->name}}"@if(in_array($class->name,$classes)){{'Selected'}} @endif)>{{$class->name}}</option>@endforeach</select>
                                     </div>
                                  </div>
-                                 
+
                                  <div class="col-md-2">
                                     <div class="form-group">
                                        <label for="" class="form-labell dd">By Language</label>
@@ -224,10 +224,10 @@ input:checked + .slider:before {
                         @foreach($data as $item)
                         @php
                           $user_details = App\UserDetail::where('user_id', $item->id)->first();
-                        @endphp 
+                        @endphp
 
-                        @if ($user_details!=null)  
-                            <tr> 
+                        @if ($user_details!=null)
+                            <tr>
                               <td>{{$i++}}</td>
                               <td>
                                   @if( $user_details->profile_img!=null)
@@ -238,7 +238,7 @@ input:checked + .slider:before {
                                  </td>
                         	    <td>{{$item->name}}</td>
                 	            <td>{{$item->phone_number}}</td>
-                                <td>{{$item->email}}</td> 
+                                <td>{{$item->email}}</td>
                                 <td>{{$user_details->district}}</td>
                                 @php
                                     $user_plan=App\Wallet::where('user_id', $item->id)->whereNotNull('plan_id')->orderBy('id', 'DESC')->first();
@@ -249,8 +249,8 @@ input:checked + .slider:before {
                                             $plans=App\Plan::where('id', $user_plan->plan_id)->first();
                                         @endphp
                                         {{$plans->plan_name}}
-                                    
-                                    @else    
+
+                                    @else
                                         No Any Plan
                                     @endif
                                 </td>
@@ -262,7 +262,7 @@ input:checked + .slider:before {
                                     </label>
                                 </td>
                                 <td>
-                                         <div class="btn-group">   
+                                         <div class="btn-group">
                                             <form action="{{ route('students.destroy', $item->id) }}" method="POST">
                                         <button type="button" class="btn btn-info btn-sm mybtn1" id="{{$item->id}}"> <i class="fa fa-eye"></i> </button>
                                                 @method('DELETE')
@@ -293,7 +293,7 @@ $(document).ready(function(){
       $.ajax({
     	            type:'GET',
                     url:'/student_edit/'+id,
-                    data:{ 
+                    data:{
                             _token:'{{ csrf_token() }}',
                         },
                     success:function(data) {
@@ -312,6 +312,7 @@ $(document).ready(function(){
                         $("#fee_range").val(data.fee_range);
                         $("#district").val(data.district);
                         $("#pincodes").val(data.pincode);
+                        $("#area_location").val(data.area_location);
                         $("#full_address").val(data.full_address);
                         $("#vaccination").val(data.vaccination);
                         $("#profile_image").attr('src','/uploads/teacher_document/'+data.profile_img);
@@ -332,18 +333,18 @@ $(document).ready(function(){
             <div class="modal-body">
                 <form action="/teacher_update" method="POST" enctype="multipart/form-data">
                 @csrf
-                    
+
                     <div class="row">
                         <input type="hidden" id="id" name="id">
                      <div class="col-md-4">
-                         
-                    <div class="form-group">   
+
+                    <div class="form-group">
                         <label>Name</label>
                         <input type="text" class="form-control" id="name" disabled>
                     </div>
                      </div>
-                     
-                     
+
+
                      <div class="col-md-4">
                      <div class="form-group">
                         <label>Contact</label>
@@ -368,7 +369,7 @@ $(document).ready(function(){
                         <input type="text" class="form-control" id="gender" disabled>
                     </div>
                      </div>
-                     
+
                      <div class="col-md-4">
                      <div class="form-group">
                         <label>Class Mode</label>
@@ -400,14 +401,20 @@ $(document).ready(function(){
                         <input type="text" class="form-control" id="fee_range" disabled>
                     </div>
                      </div>
-                     
+
                      <div class="col-md-4">
                      <div class="form-group">
                         <label>Area pin</label>
                         <input type="text" class="form-control" id="pincodes" disabled>
                     </div>
                      </div>
-                     
+                     <div class="col-md-4">
+                        <div class="form-group">
+                           <label>Area Location</label>
+                           <input type="text" class="form-control" id="area_location" disabled>
+                       </div>
+                        </div>
+
                      <div class="col-md-4">
                      <div class="form-group">
                         <label>City</label>
@@ -426,15 +433,15 @@ $(document).ready(function(){
                          <input type="text" class="form-control" id="vaccination" disabled>
                      </div>
                      </div>
-                     
+
                     <div class="col-md-4">
                           <div class="form-group">
                         <label>Profile Image</label><br>
                         <img id="profile_image" src="" style="width:120px; height:120px;">
                      </div>
                      </div>
-                      
-                   
+
+
                        <div class="col-md-12">
                         <button type="button" class="btn btn-default" data-dismiss="modal" style="float:right;">Close</button>
                        </div>

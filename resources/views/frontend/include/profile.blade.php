@@ -1,7 +1,7 @@
 
 <style>
 .position-ref {
-    
+
     display: none !important;
 
 }
@@ -125,7 +125,7 @@
 label {
     display: inline-block;
     margin-bottom: 0.5rem;
-    font-weight: 300; 
+    font-weight: 300;
     margin-top: 4px;
 }
 
@@ -230,7 +230,7 @@ label {
 }
 }
 
-</style>  
+</style>
 
 <script>
     jQuery(document).ready(function() {
@@ -342,7 +342,7 @@ $(document).ready(function(){
             uploadFile($(this).attr('id'));
         //}
     });
-    
+
     function uploadFile(id){
       var input = document.getElementById(id);
   file = input.files[0];
@@ -361,7 +361,7 @@ $(document).ready(function(){
         processData: false,
         contentType: false,
         success: function(data){
-          
+
             $('#img_'+id).val(data);
         },
           complete: function(){
@@ -379,9 +379,9 @@ $(document).ready(function(){
     alert('Input something!');
   }
 }
-    
-    
-    
+
+
+
 });
 
 </script>
@@ -425,7 +425,7 @@ $(document).ready(function(){
                                     value="{{ Auth::user()->email }}" disabled="">
                                 <div class="wizard-form-error"></div>
                             </div>
-                            
+
                         </div>
                         <div class="row form-group">
                             <div class="col-md-6">
@@ -521,13 +521,19 @@ $(document).ready(function(){
                         </div>
 
                         <div class="row form-group">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <label>Pincode*</label>
                                 <input type="text" class="form-control wizard-required" placeholder="Pincode" name="pincode"
                                     value="@if(isset($user_details)){{$user_details->pincode}}@endif">
                                 <div class="wizard-form-error"></div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
+                                <label>Area Location*</label>
+                                <input type="text" class="form-control wizard-required" placeholder="Area Location" name="area_location"
+                                    value="@if(isset($user_details)){{$user_details->area_location}}@endif">
+                                <div class="wizard-form-error"></div>
+                            </div>
+                            <div class="col-md-4">
                                 <label>Vaccination*</label>
                                 <select class="form-control wizard-required" name="vaccination">
                                     <option value="">Select Status</option>
@@ -667,11 +673,11 @@ $(document).ready(function(){
                                 <img src="uploads/teacher_document/{{$user_details->profile_img}}" style="width:100px;">
                                 @endif
                             </div>
-                            
+
                         </div>
 
                         <div class="col-md-12">
-                            
+
                             <b>Upload Highest Qualification Certificate*</b>
                             <a href="javascript:void(0);"
                                 class="btn btn-sm rounded-circle bg-white border border-dark add_button" id="btn2"><i
@@ -691,7 +697,7 @@ $(document).ready(function(){
                             </div>
 
                             <div class="increment2" style="margin-top: 10px;">
-                            	
+
                                 @foreach($result as $result_item)
                                 <div class="row">
                                     <label class="col-md-2 dd">Document Name:</label>
@@ -709,15 +715,15 @@ $(document).ready(function(){
                                 @endforeach
                             </div>
                         </div>
-                        <div class="col-md-12"> 
+                        <div class="col-md-12">
                                 <b>Upload Aadhar (Both Front & Back) *</b>
                                 @if(count($certificate)<2)
-                            
+
                             	<div class="certificate_field_copy" style="margin-top: 10px;">
 								    <div class="row"><label for="example-text-input" class="col-md-2"></label>
 								        <div class="col-md-4"><input class="form-control certificate_name" type="text" @if(count($certificate)<=2) value="Aadhar Front" @endif readonly id="certificate_name"
 								                name="certificate_name[]" @if(count($certificate)<=0) required @endif></div>
-								        <div class="col-md-5"><input type="file" id="certificate_file_default_1" 
+								        <div class="col-md-5"><input type="file" id="certificate_file_default_1"
 								                class="form-control form-border img_file_size" @if(count($certificate)<=2) required @endif>
 								                <input type="hidden" id="img_certificate_file_default_1"  name="certificate_file[]">
 								                </div>
@@ -727,14 +733,14 @@ $(document).ready(function(){
 								    <div class="row"><label for="example-text-input" class="col-md-2"></label>
 								        <div class="col-md-4"><input class="form-control certificate_name" @if(count($certificate)<=2) value="Aadhar Back" @endif readonly type="text" id="certificate_name"
 								                name="certificate_name[]" @if(count($certificate)<=0) required @endif></div>
-								        <div class="col-md-5"><input type="file" id="certificate_file_default_2" 
+								        <div class="col-md-5"><input type="file" id="certificate_file_default_2"
 								                class="form-control form-border img_file_size" @if(count($certificate)<=2) required @endif>
 								                 <input type="hidden" id="img_certificate_file_default_2"  name="certificate_file[]"></div>
 								    </div>
 								</div>
 								@endif
 								<div class="increment2" style="margin-top: 10px;">
-                            
+
                                 @foreach($certificate as $certificate_item)
                                 <div class="row">
                                     <label class="col-md-2 dd">Document Name:</label>
@@ -751,14 +757,14 @@ $(document).ready(function(){
                                 </div>
                                 @endforeach
                             </div>
-                            
-                            <b>Upload Other Certificate</b> 
+
+                            <b>Upload Other Certificate</b>
                              <a href="javascript:void(0);"
                                 class="btn btn-sm rounded-circle  bg-white border border-dark add_certificate"
                                 id="btn2"><i class="fa fa-plus" aria-hidden="true"></i></a>
                                 <div class="certificate_field">
                                 </div>
-                            
+
                         </div>
 
                         <div class="col-md-12">
@@ -815,7 +821,7 @@ $(document).ready(function(){
                                 <input type="text" class="form-control" placeholder="Email" name="email"
                                   value="{{ Auth::user()->email }}" disabled="">
                             </div>
-                            
+
                         </div>
                         <div class="row form-group">
                             <div class="col-md-6">
@@ -824,7 +830,7 @@ $(document).ready(function(){
                                   value="@if(isset($user_details)){{$user_details->second_phone}}@endif">
                                 <div class="wizard-form-error"></div>
                             </div>
-                            
+
                             <div class="col-md-6">
                                 <label for="dob">Date Of Birth*</label>
                                 <input type="Date" class="form-control wizard-required" placeholder="DOB" name="dob"
@@ -855,7 +861,7 @@ $(document).ready(function(){
                             height="100px" />
                         @endif
                     </div>
-                                
+
                             </div>
 
                        <div class="col-md-6">
@@ -941,7 +947,7 @@ $(document).ready(function(){
                                 <div class="wizard-form-error"></div>
                             </div>
                         </div>
-                       
+
 
                         <div class="form-group clearfix">
                             <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>

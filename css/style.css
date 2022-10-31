@@ -2143,7 +2143,7 @@ ul.listing-style.modify li:before {
 
 .full-width-header .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li {
 	display: inline-block;
-	margin-right: 25px;
+	margin-right: 36px;
 	padding: 0;
 	letter-spacing: 1px
 }
@@ -19890,7 +19890,7 @@ a.btn {
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    background-color: #cccccc;
+    background-color: #333;
     color: #fff;
     font-size: 15px;
     justify-content: center;
@@ -20051,7 +20051,7 @@ a.btn {
   .how-it-works_stepHeading {
     width: 100%;
     text-align: center;
-    color: #423b7d;
+    color: #ff9033;
     letter-spacing: 1px;
     padding-top: 7px
   }
@@ -20198,14 +20198,14 @@ a.btn {
     padding: 0 16px;
 }
 .nav-pills .nav-link {
-    color: #664b29;
+    color: #237f78;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
     padding: 8px 16px;
     width: 175px;
     text-align: center;
-    border: 1px solid #664b29;
+    border: 1px solid #237f78;
     border-radius: 6px;
     -webkit-box-shadow: 0 3px 6px rgb(17 17 17 / 10%);
     box-shadow: 0 3px 6px rgb(17 17 17 / 10%);
@@ -20216,7 +20216,7 @@ a.btn {
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #664b29;
+    background-color: #237f78;
 }
 .nav {
     display: -ms-flexbox;

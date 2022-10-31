@@ -30,9 +30,7 @@
       <link rel="stylesheet" href="{{ URL::asset('/css/jquery.growl.css')  }}">
   </head>
 
-
-
-          <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
@@ -57,7 +55,7 @@
     position: absolute;
     top: 48%;
     width: 1px;
-    margin-left: 6px;
+    margin-left: 12px;
 }
 </style>
 <body class="defult-home">
@@ -124,7 +122,7 @@
                                   </div>
                               </div>
                             </div>
-                            <div class="col-lg-11 text-right">
+                            <div class="col-lg-10">
                               <div class="rs-menu-area">
                                   <div class="main-menu">
                                         <div class="mobile-menu">
@@ -143,9 +141,9 @@
                                        <li class="menu-item">
                                           <a href="{{ URL::asset('/post_requirements') }}">Post Requirements</a>
                                        </li>
-                                       <li class="menu-item">
+                                       {{-- <li class="menu-item">
                                           <a href="{{ URL::asset('/apply_for_job') }}">Apply For Jobs</a>
-                                       </li>
+                                       </li> --}}
                                        <li class="menu-item">
                                           <a href="{{ URL::asset('/timeline_and_blog') }}">Timeline & Blogs</a>
                                        </li>
@@ -165,15 +163,16 @@
                                        <li class="menu-item">
                                           <a href="{{ URL::asset('/contact') }}">Contact</a>
                                        </li>
-                                       <li>
-                                        <a class="apply-btns" href="https://qalpedu.com/payu-money-payment">Pay Now</a>
-                                       </li>
-
                                     </ul>
                                         </nav>
                                   </div> <!-- //.main-menu -->
 
                               </div>
+                            </div>
+                            <div class="col-lg-1">
+                                <div>
+                                    <a class="apply-btns" href="https://qalpedu.com/payu-money-payment">Pay Now</a>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -16,7 +16,7 @@ class StudentController extends Controller
      */
     public function index(Request $request)
     {
-        
+
     $data=User::select('users.*','user_details.district')->leftjoin('user_details','users.id','user_details.user_id','user_details.pincode')->where('users.user_type','student');
      $city=null;
      $pincodes=null;
@@ -24,43 +24,43 @@ class StudentController extends Controller
      $subjects=array();
      $language=null;
      if($request->city != null){
-         
+
             $city = $request->city;
             $data=$data->where('user_details.district',$city);
-            
-           
+
+
      }
-     
-     
+
+
       if($request->pincode != null){
-         
+
             $pincodes = $request->pincode;
             $data=$data->where('user_details.pincode',$pincodes);
-            
-           
+
+
      }
-     
+
       if($request->class != null)
         {
            $classes=$request->class;
            $class=implode(",",$request->class);
            $data= $data->where('user_details.class', 'like', '%'.$class.'%');
         }
-        
-        
+
+
           if($request->subject != null)
         {
            $subjects=$request->subject;
            $subject=implode(",",$request->subject);
            $data= $data->where('user_details.subject', 'like', '%'.$subject.'%');
         }
-        
+
          if($request->language != null)
         {
            $language=$request->language;
            $data= $data->where('user_details.language', $language);
         }
-        
+
 
       $data=$data->orderBy('id', 'DESC')->get();
         //$data=User::where('user_type','student')->orderBy ('id', 'DESC')->get();
@@ -98,7 +98,7 @@ class StudentController extends Controller
         User::create($input);
         return redirect('student')->with('success','Student inserted successfully');
     }
- 
+
 
     /**
      * Display the specified resource.
@@ -146,7 +146,7 @@ class StudentController extends Controller
        User::destroy($id);
        return redirect('students')->with('danger','Student Deleted successfully');
     }
-    
+
     public function update_status(Request $request)
     {
          User::where('id',$request->id)->update(['status'=>$request->stat]);

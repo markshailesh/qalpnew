@@ -73,16 +73,6 @@ class UserController extends Controller {
 
 
 	public function other_reg(Request $request) {
-
-		// $input = $request->all();
-		// $user = new User();
-        // $user->name = $request->name;
-        // $user->phone_number = $request->phone_number;
-        // $user->email  = $request->email;
-        // $user->password  = Hash::make($request->password);
-        // $user->user_type='student';
-        // $user->save();
-         //return $request->all();
         $user_details = new PostRequirement;
         if(!empty($request->user_id))
         {
